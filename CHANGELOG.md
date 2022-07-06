@@ -1,0 +1,17 @@
+# v2.5.1 (Sun Jul 03 2022)
+
+#### ⚠️ Pushed to `main`
+
+- add chromatic ([@rianAnugrah](https://github.com/rianAnugrah))
+- First commit ([@rianAnugrah](https://github.com/rianAnugrah))
+
+#### Authors: 1
+
+- Rian Anugrah ([@rianAnugrah](https://github.com/rianAnugrah))
+# v0.1.0 (Tue Mar 09 2021)
+
+- Created first version of the design system, with `Avatar`, `Badge`, `Button`, `Icon` and `Link` components.
+
+#### Authors: 1
+
+- [your-username](https://github.com/your-username)
