@@ -4,6 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import babel from "@rollup/plugin-babel";
 import dts from "rollup-plugin-dts";
 
 const packageJson = require("./package.json");
@@ -29,6 +30,19 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss(),
+      babel({
+        exclude: "node_modules/**",
+        plugins: [
+          [
+            "babel-plugin-styled-components",
+            {
+              namespace: "rui-",
+              displayName: false,
+              fileName: false,
+            },
+          ],
+        ],
+      }),
       terser(),
     ],
   },
