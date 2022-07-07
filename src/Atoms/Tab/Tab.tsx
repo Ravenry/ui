@@ -2,7 +2,6 @@ import Responsive from "../utils/responsive";
 import React, { useEffect, useState } from "react";
 import { Tabs, TabList, TabPanel, Tab } from "react-tabs";
 import styled, { css } from "styled-components";
-import { HideOn } from "react-hide-on-scroll";
 import colors from "../utils/colors";
 import "./react-tabs.css";
 
@@ -172,11 +171,6 @@ export default function CustomTab(props) {
       }}
       isMobile={isMobile}
     >
-      {isMobile && (
-        <HideOn inverse height={400}>
-          <Sticky>{TabItemList}</Sticky>
-        </HideOn>
-      )}
       {TabItemList}
 
       {tabs &&
