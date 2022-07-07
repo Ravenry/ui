@@ -19,7 +19,7 @@ const Root = styled.div`
  * @param {boolean} [props.column]
  *
  */
-export default function Toolbar(props) {
+function Toolbar(props) {
   return <Root {...props}>{props.children}</Root>;
 }
 
@@ -66,7 +66,7 @@ const Divider = styled.div`
 /* eslint operator-linebreak: ["off"] */
 const Left =
   /** @type {import('styled-components').ThemedStyledFunction<'div', ToolbarLeftProps} */
-  (styled.div)`
+  styled.div`
     display: flex;
     align-items: center;
     flex-shrink: 1;
@@ -88,3 +88,5 @@ Toolbar.Right = Right;
 Toolbar.Group = Group;
 Toolbar.Item = Item;
 Toolbar.Spacer = Spacer;
+
+export default Toolbar;

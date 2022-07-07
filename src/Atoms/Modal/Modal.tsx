@@ -35,7 +35,7 @@ const ModalContainer = styled.div`
           left: 0;
           top: 0;
           height: 100vh;
-          width: var('--full-width');
+          width: var("--full-width");
           justify-content: center;
           align-items: center;
           background-color: rgb(231, 234, 240); /* Fallback color */
@@ -147,14 +147,14 @@ const ModalBody = styled.div`
  * @param {String} [props.padding] - custom modal padding
  * @param {String} [props.outerPadding] - custom modal outer padding
  */
-export default function Modal(props) {
+function Modal(props) {
   const { width, padding, style, outerPadding } = props;
   const { isMobile } = Responsive();
 
   React.useEffect(() => {
     document.documentElement.style.setProperty(
-      '--full-width',
-      window.innerWidth - document.documentElement.clientWidth + 'px'
+      "--full-width",
+      window.innerWidth - document.documentElement.clientWidth + "px"
     );
   }, []);
 
@@ -214,3 +214,5 @@ Modal.Footer = ModalFooter;
 Modal.SpanBlue = ModalSpanBlue;
 Modal.Spacer = ModalSpacer;
 Modal.Body = ModalBody;
+
+export default Modal;

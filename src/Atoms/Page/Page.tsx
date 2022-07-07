@@ -37,7 +37,7 @@ const ContentRight = styled.div`
   margin-top: 16px;
 `;
 
-export default function Page(props) {
+function Page(props) {
   return <Root {...props} />;
 }
 
@@ -47,3 +47,5 @@ Page.Content = Content;
 Page.ContentLeft = ContentLeft;
 Page.ContentMiddle = ContentMiddle;
 Page.ContentRight = ContentRight;
+
+export default Page;
