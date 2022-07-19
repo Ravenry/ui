@@ -24,7 +24,7 @@ const MobileContent = styled.div`
   background-color: #ffffff; /* Fallback color */
 `;
 const ModalContainer = styled.div`
-  ${({ isMobile }) =>
+  ${({ isMobile, width }) =>
     isMobile
       ? css`
           z-index: 100; /* Sit on top */
@@ -35,7 +35,7 @@ const ModalContainer = styled.div`
           left: 0;
           top: 0;
           height: 100vh;
-          width: var("--full-width");
+          width: 100%;
           justify-content: center;
           align-items: center;
           background-color: rgb(231, 234, 240); /* Fallback color */
@@ -164,6 +164,7 @@ function Modal(props) {
         isMobile={isMobile}
         open={props.open}
         data-cy={props["data-cy"]}
+        width={width}
       >
         {isMobile ? (
           <ContainerMobile>
