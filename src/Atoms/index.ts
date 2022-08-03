@@ -13,7 +13,7 @@ export { default as Dropdown } from "./Dropdown/Dropdown";
 export { default as DropdownItem } from "./Dropdown/DropdownItem";
 // export { default as VNavItem } from "./VNavItem/VNavItem";
 export { default as Icon } from "./Icon/Icon";
-// export { default as Input } from "./Input/Input";
+export { default as Input } from "./Input/Input";
 export { default as Label } from "./Label/Label";
 export { default as NavItem } from "./NavItem/NavItem";
 export { default as NavItemMobile } from "./NavItem/NavItemMobile";
