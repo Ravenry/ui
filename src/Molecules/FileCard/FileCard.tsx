@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Text, Spacer, Button, Icon, Row } from '@ravenry/ui';
+import { Text, Spacer, Button, Icon, Row } from '../../Atoms';
 
-import Responsive from '../../utils/responsive';
-import { getIconByFileType } from 'helper/utils';
+import Responsive from '../../shared/responsive';
+import { getIconByFileType } from '../../shared/utils';
 import colors from '../../shared/colors';
 import link from 'ui/assets/link.svg';
 import general from 'ui/assets/general.svg';
