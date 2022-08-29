@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import { Icon, Row, Spacer } from '@ravenry/ui';
-import colors, { ColorOptions } from 'ui/colors';
+import colors, { ColorOptions } from '../../shared/colors';
 
 const Root = styled.div`
   position: fixed;

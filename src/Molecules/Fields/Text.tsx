@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import colors, { ColorOptions } from 'ui/colors';
+import colors, { ColorOptions } from '../../shared/colors';
 import { Label, Icon, Text as P, Row, Spacer, Input } from '@ravenry/ui';
 
 export const IconContainer = styled.div`

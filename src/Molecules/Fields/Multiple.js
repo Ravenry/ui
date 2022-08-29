@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { Icon, Spacer, Text, Tag, Row, Col, Container, Input } from '@ravenry/ui';
 
-import colors from 'ui/colors';
+import colors from '../../shared/colors';
 import { useOutsideClick } from 'hooks/useOutsideClick';
 import Dropdown from '../Dropdown/Dropdown';
 

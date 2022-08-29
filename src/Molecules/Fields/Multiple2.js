@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import _ from 'lodash';
 import { Icon, Spacer, Text, Tag, Row, Col, Input } from '@ravenry/ui';
 
-import colors from 'ui/colors';
+import colors from '../../shared/colors';
 import { useOutsideClick } from 'hooks/useOutsideClick';
 import { usePrevState } from 'hooks/usePrevState';
 import Dropdown from '../Dropdown/Dropdown';

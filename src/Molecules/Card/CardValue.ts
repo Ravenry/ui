@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { isMobile } from 'react-device-detect';
 
-import colors from 'ui/colors';
+import colors from '../../shared/colors';
 
 /**
  * @typedef {{

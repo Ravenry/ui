@@ -10,7 +10,7 @@ import styled from 'styled-components';
 
 import { Notification } from 'ui/molecules';
 import { Spacer, Icon, Text, NavItem, NavItemMobile, Row } from '@ravenry/ui';
-import colors from 'ui/colors';
+import colors from '../../shared/colors';
 import Logo from 'ui/assets/Solos_Logo_Colour.png';
 import { setHeader, setSticky } from 'store/reducer/global';
 import { useDispatch } from 'react-redux';

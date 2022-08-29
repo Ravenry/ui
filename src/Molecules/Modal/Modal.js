@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import React from 'react';
 import { Segment, Icon, Spacer } from '@ravenry/ui';
-import colors from 'ui/colors';
+import colors from '../../shared/colors';
 import Responsive from 'helper/responsive';
 
 const ContainerMobile = styled.div`

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Icon, Text, Row, Spacer } from '@ravenry/ui';
 
-import colors from '../../utils/colors';
+import colors from '../../shared/colors';
 
 const Root = styled(Row)``;
 

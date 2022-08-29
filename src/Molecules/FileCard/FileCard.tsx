@@ -4,7 +4,7 @@ import { Text, Spacer, Button, Icon, Row } from '@ravenry/ui';
 
 import Responsive from '../../utils/responsive';
 import { getIconByFileType } from 'helper/utils';
-import colors from '../../utils/colors';
+import colors from '../../shared/colors';
 import link from 'ui/assets/link.svg';
 import general from 'ui/assets/general.svg';
 

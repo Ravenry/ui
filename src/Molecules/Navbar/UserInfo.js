@@ -10,7 +10,7 @@ import { Avatar, Icon, Text, Row, Spacer } from '@ravenry/ui';
 import { setHeader, setLogout, setSticky } from 'store/reducer/global';
 import { useOutsideClick } from 'hooks/useOutsideClick';
 import { useUser } from 'hooks/useUser';
-import colors from 'ui/colors';
+import colors from '../../shared/colors';
 import Feedback from 'ui/molecules/Feedback/Feedback';
 import { amplitudeEvent } from 'helper/amplitude';
 

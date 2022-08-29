@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
 
-import { Divider, Icon, Row, Spacer } from '@ravenry/ui';
-import colors from 'ui/colors';
+import { Divider, Icon, Row, Spacer } from "../../Atoms";
+import colors from "../../shared/colors";
 
-const getChevronDirection = (open, options = { open: 'up', closed: 'down' }) =>
+const getChevronDirection = (open, options = { open: "up", closed: "down" }) =>
   open ? options.open : options.closed;
 
 const Root = styled.div``;
@@ -12,15 +12,18 @@ const Root = styled.div``;
 const Header = styled(Row)`
   cursor: pointer;
 
-  ${({ headerHeight }) => (headerHeight ? `height: ${headerHeight};` : '')}
-  ${({ headerPadding }) => (headerPadding ? `padding: ${headerPadding};` : '')}
+  ${({ headerHeight }) => (headerHeight ? `height: ${headerHeight};` : "")}
+  ${({ headerPadding }) => (headerPadding ? `padding: ${headerPadding};` : "")}
   ${({ headerBackground }) =>
-    headerBackground && colors[headerBackground] ? `background: ${colors[headerBackground]};` : ''}
-  ${({ headerBorderRadius }) => (headerBorderRadius ? `border-radius: ${headerBorderRadius};` : '')}
+    headerBackground && colors[headerBackground]
+      ? `background: ${colors[headerBackground]};`
+      : ""}
+  ${({ headerBorderRadius }) =>
+    headerBorderRadius ? `border-radius: ${headerBorderRadius};` : ""}
   
   ${({ noHover }) =>
     noHover
-      ? ''
+      ? ""
       : `
         &:hover,
         &:hover > p {
@@ -38,14 +41,14 @@ const Header = styled(Row)`
       background: ${colors[headerHoverBackground]}
     }
   `
-      : ''}
+      : ""}
 `;
 
 const Content = styled.div`
   height: ${({ height }) => height}px;
   opacity: ${({ height }) => (height > 0 ? 1 : 0)};
   overflow: ${({ contentOverflow, height }) =>
-    contentOverflow && height !== 0 ? contentOverflow : 'hidden'};
+    contentOverflow && height !== 0 ? contentOverflow : "hidden"};
   /*  transition: all 0.4s ease-in-out;
   */
   transition: 0.5s;
@@ -106,7 +109,7 @@ export default function Accordion(props) {
     defaultOpen,
     chevronColor,
     chevronHoverColor,
-    chevronDirectionOptions = { open: 'up', closed: 'down' },
+    chevronDirectionOptions = { open: "up", closed: "down" },
     chevronOnRight = true,
     noHover = false,
     headerHeight,
@@ -118,8 +121,8 @@ export default function Accordion(props) {
     onClickHeader,
     autoClosed,
     divider,
-    offsetDivider = '0',
-    marginTop = '20px',
+    offsetDivider = "0",
+    marginTop = "20px",
     chevronContainerHover = false,
     disableClickTarget,
     disableContentChange = false,
@@ -147,7 +150,7 @@ export default function Accordion(props) {
     if (
       !disableContentChange &&
       ref.current &&
-      typeof onClickHeader !== 'function' &&
+      typeof onClickHeader !== "function" &&
       defaultOpen
     ) {
       setHeight(defaultOpen ? ref.current.scrollHeight : 0);
@@ -175,7 +178,12 @@ export default function Accordion(props) {
 
   useEffect(() => {
     if (contentArrayLength > 0) {
-      setHeight([...(ref.current?.children || [])].reduce((a, b) => a + (b.clientHeight || 0), 0));
+      setHeight(
+        [...(ref.current?.children || [])].reduce(
+          (a, b) => a + (b.clientHeight || 0),
+          0
+        )
+      );
     }
   }, [contentArrayLength]);
 
@@ -187,14 +195,14 @@ export default function Accordion(props) {
           if (!disableClickTarget?.contains(e.target)) {
             toggleAccordion();
 
-            if (typeof onClickHeader === 'function') {
+            if (typeof onClickHeader === "function") {
               onClickHeader();
             }
           }
         }}
         alignItems="center"
-        justifyContent={chevronOnRight ? 'space-between' : 'flex-end'}
-        style={chevronOnRight ? {} : { flexDirection: 'row-reverse' }}
+        justifyContent={chevronOnRight ? "space-between" : "flex-end"}
+        style={chevronOnRight ? {} : { flexDirection: "row-reverse" }}
         noHover={noHover}
         headerHeight={headerHeight}
         headerPadding={headerPadding}
@@ -208,7 +216,7 @@ export default function Accordion(props) {
             <Icon
               name={`chevron ${chevronDirection}`}
               fill={chevronColor}
-              hoverFill={chevronHoverColor || ''}
+              hoverFill={chevronHoverColor || ""}
               hover
             />
           </Container>
@@ -216,12 +224,14 @@ export default function Accordion(props) {
           <Icon
             name={`chevron ${chevronDirection}`}
             fill={chevronColor}
-            hoverFill={chevronHoverColor || ''}
+            hoverFill={chevronHoverColor || ""}
             hover
           />
         )}
       </Header>
-      {divider && !open ? <Divider offset={offsetDivider} style={{ marginTop }} /> : null}
+      {divider && !open ? (
+        <Divider offset={offsetDivider} style={{ marginTop }} />
+      ) : null}
       <Content ref={ref} height={finalHeight} contentOverflow={contentOverflow}>
         {open && content}
       </Content>

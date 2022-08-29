@@ -4,7 +4,7 @@ import moment from 'moment';
 import DOMPurify from 'dompurify';
 import { Text, Spacer, Button, Row, Col, Rating } from '@ravenry/ui';
 import { AttachmentBox } from 'ui/molecules';
-import colors from 'ui/colors';
+import colors from '../../shared/colors';
 import { useSelector } from 'react-redux';
 
 const TimeStamps = styled.div`

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Button, Container, Text, Spacer, ButtonProps } from '@ravenry/ui';
-import colors from 'ui/colors';
+import colors from '../../shared/colors';
 
 interface Props extends ButtonProps {
   upperText?: string;

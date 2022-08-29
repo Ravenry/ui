@@ -2,7 +2,7 @@ import React from 'react';
 import { Uploader as Up } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
 import styled from 'styled-components';
-import colors from 'ui/colors';
+import colors from '../../shared/colors';
 import { Icon } from '@ravenry/ui';
 
 const UploadButton = styled.div`

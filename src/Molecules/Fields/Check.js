@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Label, Input } from '@ravenry/ui';
 
-import colors from 'ui/colors';
+import colors from '../../shared/colors';
 
 const Container = styled.div`
   display: flex;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import { Icon, Tooltip } from '@ravenry/ui';
-import colors, { ColorOptions } from 'ui/colors';
+import colors, { ColorOptions } from '../../shared/colors';
 
 interface RootProps {
   color: 'blue' | 'black';

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import colors from '../../utils/colors';
+import colors from '../../shared/colors';
 
 export const defaultInputWidth = '400px';
 

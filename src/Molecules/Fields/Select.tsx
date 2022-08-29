@@ -4,7 +4,7 @@ import ReactSelect from 'react-select';
 import { useField, useFormikContext } from 'formik';
 import { Label, Text, Row, Spacer } from '@ravenry/ui';
 
-import colors from '../../utils/colors';
+import colors from '../../shared/colors';
 
 const customStyles = ({ height, borderRadius, optionPaddingTop } = {}) => {
   return {

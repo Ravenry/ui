@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import link from 'ui/assets/link.svg';
 import { Icon, Text, Col, Row, Spacer } from '@ravenry/ui';
 import { getIconByFileType, formatFileSize } from 'helper/utils';
-import colors, { ColorOptions } from 'ui/colors';
+import colors, { ColorOptions } from '../../shared/colors';
 import { amplitudeEvent } from 'helper/amplitude';
 
 const Root = styled.div<{ width?: string; backgroundColor?: ColorOptions; customMargin?: string }>`

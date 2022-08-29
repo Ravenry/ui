@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { isMobile } from 'react-device-detect';
 
-import colors from 'ui/colors';
+import colors from '../../shared/colors';
 
 const CardLabel = styled.div`
   font-size: 0.75rem;

@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Col, Icon, Text, Row, Spacer } from '@ravenry/ui';
-import colors from 'ui/colors';
+import colors from '../../shared/colors';
 
 /**
  * FilePreview molecule

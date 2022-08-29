@@ -5,7 +5,7 @@ import DateRangePicker from 'react-daterange-picker';
 import moment from 'moment-timezone';
 import { Icon, Spacer } from '@ravenry/ui';
 
-import colors from '../../utils/colors';
+import colors from '../../shared/colors';
 import { ErrorText, Label, Root, SuccessText } from './Shared';
 import './Dates.css';
 

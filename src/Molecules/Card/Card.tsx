@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import Responsive from "helper/responsive";
 import { Segment, Spacer, UnreadDot, Container, Dropdown } from "@ravenry/ui";
 import { IconButton } from "..";
-import colors from "ui/colors";
+import colors from "../../shared/colors";
 import getElevation from "ui/elevations";
 import { useOutsideClick } from "hooks/useOutsideClick";
 

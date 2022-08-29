@@ -5,7 +5,7 @@ import Breadcrumbs from 'react-router-dynamic-breadcrumbs';
 import { isBrowser } from 'react-device-detect';
 import { Icon, Row, Spacer, Text } from '@ravenry/ui';
 
-import colors from '../../utils/colors';
+import colors from '../../shared/colors';
 import Api from 'helper/api';
 
 const Container = styled.div`
