@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Segment } from '@ravenry/ui';
-import getElevation from 'ui/elevations';
-import Responsive from 'helper/responsive';
+import { Segment } from '../../Atoms';
+import getElevation from '../../shared/elevations';
+import Responsive from '../../shared/responsive';
 
 const CardRoot = styled(Segment)`
   margin-bottom: ${({ isMobile, noMargin }) => (isMobile ? '24px' : noMargin ? '0' : '24px')};
