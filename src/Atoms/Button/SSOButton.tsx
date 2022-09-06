@@ -34,15 +34,15 @@ const SSOButtonStyled = styled(Button)`
     color: var(--color);
     background-color: var(--background-color);
     border: var(--border);
+
+    & > span > span > svg > path {
+      fill: var(--icon-fill-color);
+    }
+
+    & svg {
+      fill: var(--icon-fill-color);
+    }
   }
-
-  & > span > span > svg > path {
-        fill: var(--icon-fill-color);
-      }
-
-  & svg {
-        fill: var(--icon-fill-color);
-      }
 `
 
 const STYLES = {
