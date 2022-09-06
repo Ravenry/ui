@@ -24,3 +24,11 @@ googleButton.args = {
   children: "Log in with Google",
   type: "submit",
 };
+
+export const facebookButton = Template.bind({});
+googleButton.args = {
+  ssoType: "facebook",
+  children: "Log in with Google",
+  type: "submit",
+};
+

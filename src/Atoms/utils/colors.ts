@@ -87,7 +87,8 @@ export type ColorOptions =
   | "backgroundLight"
   | "backgroundDark"
   | "backgroundWhite"
-  | "linkedInBlueHover";
+  | "linkedInBlueHover"
+  | "facebookBlue";
 
 type ColorMap = {
   [key in ColorOptions]: string;
@@ -142,6 +143,7 @@ export const colors: ColorMap = {
   linkedInBlue: "#2867B2",
   linkedInBlueHover: "#307CD7",
   linkedInBlue90: "#307CD7",
+  facebookBlue: "#1877F2",
 
   // RED
   red: "#D7373F",
