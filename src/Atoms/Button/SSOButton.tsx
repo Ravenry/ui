@@ -72,7 +72,7 @@ const STYLES = {
 export default function SSOButton(props: {
   children: React.ReactNode;
   onClick: React.MouseEventHandler;
-  ssoType: "linkedin" | "google" | "facebook"; // @TODO implement SSO Google
+  ssoType: "linkedin" | "google" | "facebook";
   disabled?: boolean;
   fluid?: boolean;
   type?: "button" | "submit" | "reset";
