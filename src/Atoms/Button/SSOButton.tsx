@@ -36,7 +36,7 @@ const SSOButtonStyled = styled(Button)`
     border: var(--border);
 
     & > span > span > svg > path {
-      fill: var(--icon-fill-color) !important;
+      fill: var(--icon-fill-color);
     }
 
     & svg {
