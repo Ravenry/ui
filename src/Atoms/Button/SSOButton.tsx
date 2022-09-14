@@ -4,6 +4,7 @@ import styled from "styled-components";
 import colors from "../utils/colors";
 import Button from "./Button";
 import Icon from "../Icon/Icon";
+import Responsive from "../utils/responsive";
 
 const InternalSpan = styled.span<{ center?: boolean }>`
   display: flex;
@@ -45,6 +46,13 @@ const SSOButtonStyled = styled(Button)`
   }
 `
 
+const MobileSSOButtonStyled = styled.button`
+  && {
+    all: unset;
+    cursor: pointer;
+  }
+`
+
 const STYLES = {
   linkedin: {
     dividerColor: colors.white,
@@ -79,6 +87,8 @@ export default function SSOButton(props: {
 }) {
   const { children, onClick, disabled, fluid, ssoType, type } = props;
   const styles = STYLES[ssoType];
+  const { isMobile } = Responsive();
+  const ButtonContainer = isMobile ? MobileSSOButtonStyled: SSOButtonStyled;
 
   return (
     <div style={{
@@ -88,18 +98,17 @@ export default function SSOButton(props: {
         '--background-color': styles.backgroundColor,
         '--color': styles.color
     } as React.CSSProperties}>
-      <SSOButtonStyled
-        onClick={onClick}
-        fluid={fluid}
-        disabled={disabled}
-        type={type}
-      >
-        <InternalSpan>
+      <ButtonContainer>
+        {isMobile ?
+        <Icon width="46" height="47" viewBox="0 0 46 47" name={`${ssoType}-mobile`} />
+          :
+          <InternalSpan>
           <Icon name={`${ssoType}-icon`} />
           <InternalDivider disabled={disabled} />
           <InternalSpan center>{children}</InternalSpan>
         </InternalSpan>
-      </SSOButtonStyled>
+        }
+      </ButtonContainer>
     </div>
   );
 }

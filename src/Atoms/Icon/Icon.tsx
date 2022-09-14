@@ -681,6 +681,90 @@ export default function Icon(props: IconProps) {
       setIcon(
         <path d="M5.83334 12.4998H8.33334C8.55435 12.4998 8.76631 12.412 8.92259 12.2558C9.07887 12.0995 9.16667 11.8875 9.16667 11.6665C9.16667 11.4455 9.07887 11.2335 8.92259 11.0772C8.76631 10.921 8.55435 10.8332 8.33334 10.8332H5.83334C5.61232 10.8332 5.40036 10.921 5.24408 11.0772C5.0878 11.2335 5.00001 11.4455 5.00001 11.6665C5.00001 11.8875 5.0878 12.0995 5.24408 12.2558C5.40036 12.412 5.61232 12.4998 5.83334 12.4998ZM15.8333 4.1665H4.16667C3.50363 4.1665 2.86775 4.4299 2.3989 4.89874C1.93006 5.36758 1.66667 6.00346 1.66667 6.6665V14.1665C1.66667 14.8295 1.93006 15.4654 2.3989 15.9343C2.86775 16.4031 3.50363 16.6665 4.16667 16.6665H15.8333C16.4964 16.6665 17.1323 16.4031 17.6011 15.9343C18.0699 15.4654 18.3333 14.8295 18.3333 14.1665V6.6665C18.3333 6.00346 18.0699 5.36758 17.6011 4.89874C17.1323 4.4299 16.4964 4.1665 15.8333 4.1665ZM16.6667 14.1665C16.6667 14.3875 16.5789 14.5995 16.4226 14.7558C16.2663 14.912 16.0544 14.9998 15.8333 14.9998H4.16667C3.94566 14.9998 3.7337 14.912 3.57742 14.7558C3.42114 14.5995 3.33334 14.3875 3.33334 14.1665V9.1665H16.6667V14.1665ZM16.6667 7.49984H3.33334V6.6665C3.33334 6.44549 3.42114 6.23353 3.57742 6.07725C3.7337 5.92097 3.94566 5.83317 4.16667 5.83317H15.8333C16.0544 5.83317 16.2663 5.92097 16.4226 6.07725C16.5789 6.23353 16.6667 6.44549 16.6667 6.6665V7.49984Z" />
       );
+    } else if(name === 'google-mobile'){
+      setIcon(
+        <>
+          <g filter="url(#filter0_dd_3888_1748)">
+          <rect x="3" y="3" width="40" height="40" rx="20" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M35.3403 23.2958C35.3403 22.374 35.2576 21.4876 35.104 20.6367H22.8604V25.6654H29.8567C29.5553 27.2904 28.6394 28.6672 27.2626 29.589V32.8508H31.464C33.9222 30.5876 35.3403 27.2549 35.3403 23.2958Z" fill="#4285F4"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M22.8604 36.0007C26.3704 36.0007 29.3132 34.8366 31.4641 32.8512L27.2627 29.5893C26.0986 30.3693 24.6095 30.8302 22.8604 30.8302C19.4745 30.8302 16.6086 28.5434 15.5863 25.4707H11.2432V28.8389C13.3823 33.0875 17.7786 36.0007 22.8604 36.0007Z" fill="#34A853"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5863 25.4703C15.3263 24.6903 15.1785 23.8571 15.1785 23.0003C15.1785 22.1435 15.3263 21.3103 15.5863 20.5303V17.1621H11.2431C10.3626 18.9171 9.86035 20.9026 9.86035 23.0003C9.86035 25.098 10.3626 27.0835 11.2431 28.8385L15.5863 25.4703Z" fill="#FBBC05"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M22.8604 15.1705C24.7691 15.1705 26.4827 15.8264 27.83 17.1145L31.5586 13.3859C29.3073 11.2882 26.3645 10 22.8604 10C17.7786 10 13.3823 12.9132 11.2432 17.1618L15.5863 20.53C16.6086 17.4573 19.4745 15.1705 22.8604 15.1705Z" fill="#EA4335"/>
+          </g>
+          <defs>
+          <filter id="filter0_dd_3888_1748" x="0" y="0.85" width="46" height="46" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="0.85"/>
+          <feGaussianBlur stdDeviation="1.5"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3888_1748"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="0.25"/>
+          <feGaussianBlur stdDeviation="0.5"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.039 0"/>
+          <feBlend mode="normal" in2="effect1_dropShadow_3888_1748" result="effect2_dropShadow_3888_1748"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_3888_1748" result="shape"/>
+          </filter>
+          </defs>
+        </>
+      )
+    } else if(name === 'facebook-mobile'){
+      setIcon(
+        <>
+          <g filter="url(#filter0_dd_3888_1754)">
+          <g clip-path="url(#clip0_3888_1754)">
+          <rect x="3" y="3" width="40" height="40" rx="20" fill="#1877F2"/>
+          <path d="M30.7852 28.7812L31.6719 23H26.125V19.25C26.125 17.668 26.8984 16.125 29.3828 16.125H31.9062V11.2031C31.9062 11.2031 29.6172 10.8125 27.4297 10.8125C22.8594 10.8125 19.875 13.582 19.875 18.5938V23H14.7969V28.7812H19.875V42.7578C20.8945 42.918 21.9375 43 23 43C24.0625 43 25.1055 42.918 26.125 42.7578V28.7812H30.7852Z" fill="white"/>
+          </g>
+          </g>
+          <defs>
+          <filter id="filter0_dd_3888_1754" x="0" y="0.85" width="46" height="46" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="0.85"/>
+          <feGaussianBlur stdDeviation="1.5"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3888_1754"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="0.25"/>
+          <feGaussianBlur stdDeviation="0.5"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.039 0"/>
+          <feBlend mode="normal" in2="effect1_dropShadow_3888_1754" result="effect2_dropShadow_3888_1754"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_3888_1754" result="shape"/>
+          </filter>
+          <clipPath id="clip0_3888_1754">
+          <rect x="3" y="3" width="40" height="40" rx="20" fill="white"/>
+          </clipPath>
+          </defs>
+        </>
+      )
+    } else if(name === 'linkedin-mobile'){
+      setIcon(
+        <>
+          <g filter="url(#filter0_dd_3888_1756)">
+          <rect x="3" y="3" width="40" height="40" rx="20" fill="#2867B2"/>
+          <rect x="9.66699" y="9.66602" width="26.6667" height="26.6667" rx="10" fill="white"/>
+          <path d="M34.3651 9.66602H11.6355C11.1134 9.66602 10.6127 9.87341 10.2436 10.2426C9.87439 10.6118 9.66699 11.1125 9.66699 11.6345V34.3642C9.66699 34.8862 9.87439 35.387 10.2436 35.7561C10.6127 36.1253 11.1134 36.3327 11.6355 36.3327H34.3651C34.8872 36.3327 35.3879 36.1253 35.7571 35.7561C36.1263 35.387 36.3337 34.8862 36.3337 34.3642V11.6345C36.3337 11.1125 36.1263 10.6118 35.7571 10.2426C35.3879 9.87341 34.8872 9.66602 34.3651 9.66602ZM17.6151 32.3827H13.6059V19.6475H17.6151V32.3827ZM15.6077 17.8827C15.153 17.8801 14.7091 17.7429 14.3323 17.4883C13.9554 17.2338 13.6624 16.8733 13.4902 16.4523C13.318 16.0314 13.2744 15.5689 13.3648 15.1232C13.4552 14.6775 13.6757 14.2685 13.9983 13.948C14.3209 13.6274 14.7312 13.4096 15.1775 13.3221C15.6238 13.2345 16.086 13.2811 16.5058 13.456C16.9256 13.6309 17.2843 13.9262 17.5364 14.3047C17.7885 14.6832 17.9229 15.1279 17.9225 15.5827C17.9268 15.8872 17.8698 16.1894 17.7548 16.4714C17.6398 16.7533 17.4692 17.0092 17.2532 17.2239C17.0372 17.4385 16.7802 17.6074 16.4975 17.7206C16.2148 17.8338 15.9122 17.8889 15.6077 17.8827ZM32.3929 32.3938H28.3855V25.4364C28.3855 23.3845 27.5133 22.7512 26.3874 22.7512C25.1985 22.7512 24.0318 23.6475 24.0318 25.4882V32.3938H20.0225V19.6568H23.8781V21.4216H23.93C24.317 20.6382 25.6726 19.2994 27.7411 19.2994C29.9781 19.2994 32.3948 20.6271 32.3948 24.516L32.3929 32.3938Z" fill="#2867B2"/>
+          </g>
+          <defs>
+          <filter id="filter0_dd_3888_1756" x="0" y="0.85" width="46" height="46" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="0.85"/>
+          <feGaussianBlur stdDeviation="1.5"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3888_1756"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="0.25"/>
+          <feGaussianBlur stdDeviation="0.5"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.039 0"/>
+          <feBlend mode="normal" in2="effect1_dropShadow_3888_1756" result="effect2_dropShadow_3888_1756"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_3888_1756" result="shape"/>
+          </filter>
+          </defs>
+        </>
+      )
     }
   }, [name]);
 
@@ -742,5 +826,8 @@ export const IconList = [
   "newpaperclip",
   "facebook-icon",
   "linkedin-icon",
-  "google-icon"
+  "google-icon",
+  "google-mobile",
+  "facebook-mobile",
+  "linkedin-mobile"
 ];

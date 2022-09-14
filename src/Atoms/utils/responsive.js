@@ -8,7 +8,7 @@ const Responsive = () => {
   const isPortrait = useMediaQuery({ orientation: "portrait" });
   const isRetina = useMediaQuery({ minResolution: "2dppx" });
   const isBrowser = useMediaQuery({ minWidth: 1224 });
-  const isMobile = useMediaQuery({ maxWidth: 1224 });
+  const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return {
     isDesktopOrLaptop,
