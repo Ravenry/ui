@@ -96,34 +96,6 @@ const Container = styled.div`
   }
 `;
 
-/**
- * Accordion
- *
- * @param {Object} props -
- * @param {*} props.title -
- * @param {*} props.content -
- * @param {boolean} [props.defaultOpen]
- * @param {string} [props.headerHoverBackground]
- * @param {string} [props.headerBorderRadius]
- * @param {string} [props.headerPadding]
- * @param {string} [props.headerHeight]
- * @param {string} [props.headerBackground]
- * @param {string} [props.contentOverflow]
- * @param {boolean} [props.noHover]
- * @param {boolean} [props.divider]
- * @param {string} [props.offsetDivider]
- * @param {string} [props.chevronHoverColor]
- * @param {string} [props.chevronColor]
- * @param {Object} [props.chevronDirectionOptions]
- * @param {boolean} [props.chevronOnRight]
- * @param {Function} [props.onClickHeader]
- * @param {boolean} [props.chevronContainerHover]
- * @param {React.ReactNode} [props.disableClickTarget] use this if you want to disable on click event in an element inside accordion
- * @param {boolean} [props.disableContentChange] set true if want to turn off the useEffect which watch content prop
- * @param {Number} [props.contentArrayLength] use this if the content contains array and there may be any changes to that array length
- *
- */
-
 export interface AccordionProps {
   title?: any;
   content?: any;
