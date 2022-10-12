@@ -2,14 +2,27 @@ import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 import { Divider, Icon, Row, Spacer } from "../../Atoms";
-import colors from "../../shared/colors";
+import colors, { ColorOptions } from "../../shared/colors";
+import { withProps } from "../../shared/withProps";
 
-const getChevronDirection = (open, options = { open: "up", closed: "down" }) =>
-  open ? options.open : options.closed;
+const getChevronDirection = (
+  open: boolean,
+  options = { open: "up", closed: "down" }
+) => (open ? options.open : options.closed);
 
 const Root = styled.div``;
 
-const Header = styled(Row)`
+export interface HeaderProps {
+  bold: boolean;
+  headerHeight: string;
+  headerPadding: string;
+  headerBackground: ColorOptions;
+  headerBorderRadius: string;
+  noHover: boolean;
+  headerHoverBackground: ColorOptions;
+}
+
+const Header = withProps<HeaderProps>()(styled(Row))`
   cursor: pointer;
 
   ${({ headerHeight }) => (headerHeight ? `height: ${headerHeight};` : "")}
@@ -44,7 +57,15 @@ const Header = styled(Row)`
       : ""}
 `;
 
-const Content = styled.div`
+export interface ContentProps {
+  height: any;
+  opacity: any;
+  overflow: any;
+  contentOverflow: any;
+  ref: any;
+}
+
+const Content = withProps<ContentProps>()(styled.div)`
   height: ${({ height }) => height}px;
   opacity: ${({ height }) => (height > 0 ? 1 : 0)};
   overflow: ${({ contentOverflow, height }) =>
@@ -102,7 +123,35 @@ const Container = styled.div`
  * @param {Number} [props.contentArrayLength] use this if the content contains array and there may be any changes to that array length
  *
  */
-export default function Accordion(props) {
+
+export interface AccordionProps {
+  title?: any;
+  content?: any;
+  defaultOpen?: boolean;
+  chevronColor?: ColorOptions;
+  chevronHoverColor?: ColorOptions;
+  chevronDirectionOptions?: any;
+  chevronOnRight?: boolean;
+  noHover?: boolean;
+  headerHeight?: any;
+  headerPadding?: any;
+  headerBackground?: any;
+  headerHoverBackground?: any;
+  headerBorderRadius?: any;
+  contentOverflow?: string;
+  onClickHeader?: any;
+  autoClosed?: any;
+  divider?: boolean;
+  offsetDivider?: string;
+  marginTop?: string;
+  chevronContainerHover?: boolean;
+  disableClickTarget?: any;
+  disableContentChange?: boolean;
+  contentArrayLength?: number;
+  contentHeight?: any;
+}
+
+export default function Accordion(props: AccordionProps) {
   const {
     title,
     content,
@@ -130,7 +179,7 @@ export default function Accordion(props) {
     contentHeight,
   } = props;
 
-  const ref = useRef(null);
+  const ref = useRef<HTMLInputElement>(null);
   const [open, setOpen] = useState(!!defaultOpen);
   const [height, setHeight] = useState(0);
   const [fixedContentHeight, setFixedContentHeight] = useState(0);
@@ -158,8 +207,8 @@ export default function Accordion(props) {
   }, [content, onClickHeader]);
 
   useEffect(() => {
-    setHeight(defaultOpen ? ref.current.scrollHeight : 0);
-    setFixedContentHeight(ref.current.scrollHeight);
+    setHeight(defaultOpen ? ref.current.scrollHeight : 0); //TODO type script ini merah terus, belum nemu solve nya
+    setFixedContentHeight(ref.current.scrollHeight); //TODO TS ERROR
   }, []);
 
   useEffect(() => {
@@ -179,7 +228,7 @@ export default function Accordion(props) {
   useEffect(() => {
     if (contentArrayLength > 0) {
       setHeight(
-        [...(ref.current?.children || [])].reduce(
+        [...(ref.current?.children || [])].reduce( //TODO TS ERROR
           (a, b) => a + (b.clientHeight || 0),
           0
         )
@@ -216,7 +265,7 @@ export default function Accordion(props) {
             <Icon
               name={`chevron ${chevronDirection}`}
               fill={chevronColor}
-              hoverFill={chevronHoverColor || ""}
+              hoverFill={chevronHoverColor}
               hover
             />
           </Container>
@@ -224,15 +273,16 @@ export default function Accordion(props) {
           <Icon
             name={`chevron ${chevronDirection}`}
             fill={chevronColor}
-            hoverFill={chevronHoverColor || ""}
+            hoverFill={chevronHoverColor}
             hover
           />
         )}
+        S
       </Header>
       {divider && !open ? (
         <Divider offset={offsetDivider} style={{ marginTop }} />
       ) : null}
-      <Content ref={ref} height={finalHeight} contentOverflow={contentOverflow}>
+      <Content ref={ref} height={finalHeight} contentOverflow={contentOverflow}> //TODO TS ERROR
         {open && content}
       </Content>
     </Root>
