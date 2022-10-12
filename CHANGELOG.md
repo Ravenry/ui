@@ -1,17 +1,14 @@
-# v2.5.1 (Sun Jul 03 2022)
+# Changelog
 
-#### ⚠️ Pushed to `main`
+All notable changes to this project will be documented in this file.
 
-- add chromatic ([@rianAnugrah](https://github.com/rianAnugrah))
-- First commit ([@rianAnugrah](https://github.com/rianAnugrah))
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-#### Authors: 1
+## [Unreleased]
 
-- Rian Anugrah ([@rianAnugrah](https://github.com/rianAnugrah))
-# v0.1.0 (Tue Mar 09 2021)
+## [0.3.0] - 2022-10-12
 
-- Created first version of the design system, with `Avatar`, `Badge`, `Button`, `Icon` and `Link` components.
+### Added
 
-#### Authors: 1
-
-- [your-username](https://github.com/your-username)
+- Accordion molecule
