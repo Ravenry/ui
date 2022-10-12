@@ -207,9 +207,9 @@ export default function Accordion(props: AccordionProps) {
   }, [content, onClickHeader]);
 
   useEffect(() => {
-    setHeight(defaultOpen ? ref.current.scrollHeight : 0); //TODO type script ini merah terus, belum nemu solve nya
-    setFixedContentHeight(ref.current.scrollHeight); //TODO TS ERROR
-  }, []);
+        // @TODO Typescript errot around ref props
+    setHeight(defaultOpen ? ref.current.scrollHeight : 0);
+    setFixedContentHeight(ref.current.scrollHeight);
 
   useEffect(() => {
     if (!defaultOpen && ref.current && open) {
@@ -228,7 +228,8 @@ export default function Accordion(props: AccordionProps) {
   useEffect(() => {
     if (contentArrayLength > 0) {
       setHeight(
-        [...(ref.current?.children || [])].reduce( //TODO TS ERROR
+        // @TODO Typescript errot around ref props
+        [...(ref.current?.children || [])].reduce(
           (a, b) => a + (b.clientHeight || 0),
           0
         )
@@ -282,7 +283,10 @@ export default function Accordion(props: AccordionProps) {
       {divider && !open ? (
         <Divider offset={offsetDivider} style={{ marginTop }} />
       ) : null}
-      <Content ref={ref} height={finalHeight} contentOverflow={contentOverflow}> //TODO TS ERROR
+
+      {/*@TODO Typescript errot around ref props */}
+
+      <Content ref={ref} height={finalHeight} contentOverflow={contentOverflow}>
         {open && content}
       </Content>
     </Root>
