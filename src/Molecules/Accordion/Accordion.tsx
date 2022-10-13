@@ -253,7 +253,6 @@ export default function Accordion(props: AccordionProps) {
             hover
           />
         )}
-        S
       </Header>
       {divider && !open ? (
         <Divider offset={offsetDivider} style={{ marginTop }} />
