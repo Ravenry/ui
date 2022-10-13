@@ -179,9 +179,12 @@ export default function Accordion(props: AccordionProps) {
   }, [content, onClickHeader]);
 
   useEffect(() => {
-        // @TODO Typescript errot around ref props
+
+    // @TODO Typescript errot around ref props
     setHeight(defaultOpen ? ref.current.scrollHeight : 0);
     setFixedContentHeight(ref.current.scrollHeight);
+  }, []);
+
 
   useEffect(() => {
     if (!defaultOpen && ref.current && open) {
