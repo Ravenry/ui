@@ -1,5 +1,5 @@
-export { default as Accordion } from './Accordion/Accordion';
-// export { default as Alert } from './Alert/Alert';
+export { default as Accordion } from "./Accordion/Accordion";
+export { default as Alert } from "./Alert/Alert";
 // export { default as AttachmentBox } from './AttachmentBox/AttachmentBox';
 // export { default as BorderedButtonContainer } from './BorderedButtonContainer/BorderedButtonContainer';
 // export { default as NewCard } from './NewCard/NewCard';
