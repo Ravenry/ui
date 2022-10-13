@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import { Icon, Row, Spacer } from '../../Atoms/';
+import { Icon, Row, Spacer } from '../../Atoms';
 import colors, { ColorOptions } from '../../shared/colors';
 
 const Root = styled.div`
