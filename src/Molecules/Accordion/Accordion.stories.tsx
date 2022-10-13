@@ -11,9 +11,9 @@ const Template: ComponentStory<typeof Accordion> = (args) => (
   <Accordion {...args} />
 );
 
-export const stadndard = Template.bind({});
+export const standard = Template.bind({});
 
-stadndard.args = {
+standard.args = {
   title: "Accordion",
   content: "Accordion Content",
   defaultOpen: false,

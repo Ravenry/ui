@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import { Icon, Row, Spacer } from '@ravenry/ui';
+import { Icon, Row, Spacer } from '../../Atoms';
 import colors, { ColorOptions } from '../../shared/colors';
 
 const Root = styled.div`
@@ -42,7 +42,7 @@ const Content = styled(Row)<StyledContent>`
   animation: ${animation} ${({ stopDuration }) => stopDuration}s linear 1;
 `;
 
-interface Props {
+interface AlertProps {
   children?: React.ReactNode;
   success?: boolean;
   danger?: boolean;
@@ -54,7 +54,7 @@ interface Props {
   iconFill?: ColorOptions;
 }
 
-export default function Alert(props: Props) {
+export default function Alert(props: AlertProps) {
   const { children, success, danger, open, onFinish, stopDuration = 5, icon, iconFill } = props;
 
   const color = success ? 'green' : danger ? 'red' : 'black';
