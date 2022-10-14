@@ -21,7 +21,7 @@ export { default as Alert } from './Alert/Alert';
 // export { default as Search } from './Search/Search';
 // export { default as Empty } from './Empty/Empty';
 // // export { default as RatingBarGroup } from './RatingBarGroup/RatingBarGroup'; ???
-// export { default as IconWithTooltip } from './IconWithTooltip/IconWithTooltip';
+export { default as IconWithTooltip } from './IconWithTooltip/IconWithTooltip';
 // export { default as Uploader } from './Uploader/Uploader';
 // export { default as FilePreview } from './FilePreview/FilePreview';
 // // export { default as CheckboxGrid } from './CheckboxGrid/CheckboxGrid';
