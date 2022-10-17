@@ -1,16 +1,17 @@
-import doc from "ui/assets/DOC.svg";
-import gif from "ui/assets/GIF.svg";
-import jpg from "ui/assets/JPG.svg";
-import png from "ui/assets/PNG.svg";
-import pdf from "ui/assets/PDF.svg";
-import ppt from "ui/assets/PPT.svg";
-import rar from "ui/assets/RAR.svg";
-import svg from "ui/assets/SVG.svg";
-import xls from "ui/assets/XLS.svg";
-import zip from "ui/assets/ZIP.svg";
-import other from "ui/assets/general.svg";
+import doc from "../assets/DOC.svg";
+import gif from "../assets/GIF.svg";
+import jpg from "../assets/JPG.svg";
+import png from "../assets/PNG.svg";
+import pdf from "../assets/PDF.svg";
+import ppt from "../assets/PPT.svg";
+import rar from "../assets/RAR.svg";
+import svg from "../assets/SVG.svg";
+import xls from "../assets/XLS.svg";
+import zip from "../assets/ZIP.svg";
+// import other from "ui/assets/general.svg";
+import other from "../assets/general.svg";
 
-export function formatFileSize(sizeInBytes: number) {
+export function formatFileSize(sizeInBytes: string | number) {
   const KILO = 1024;
   const MEGA = KILO * 1024;
 
