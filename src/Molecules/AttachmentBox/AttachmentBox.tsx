@@ -1,18 +1,22 @@
-import React from 'react';
-import styled from 'styled-components';
-import link from 'ui/assets/link.svg';
-import { Icon, Text, Col, Row, Spacer } from '@ravenry/ui';
-import { getIconByFileType, formatFileSize } from 'helper/utils';
-import colors, { ColorOptions } from '../../shared/colors';
-import { amplitudeEvent } from 'helper/amplitude';
+import React from "react";
+import styled from "styled-components";
+import link from "../../assets/link.svg";
+import { Icon, Text, Col, Row, Spacer } from "../../Atoms";
+import { getIconByFileType, formatFileSize } from "../../shared/utils";
+import colors, { ColorOptions } from "../../shared/colors";
 
-const Root = styled.div<{ width?: string; backgroundColor?: ColorOptions; customMargin?: string }>`
+const Root = styled.div<{
+  width?: string;
+  backgroundColor?: ColorOptions;
+  customMargin?: string;
+}>`
   position: relative;
   cursor: pointer;
   display: flex;
   box-sizing: border-box;
-  width: ${(props) => props.width || '340px'};
-  ${({ backgroundColor }) => (backgroundColor ? `background-color: ${backgroundColor};` : null)}
+  width: ${(props) => props.width || "340px"};
+  ${({ backgroundColor }) =>
+    backgroundColor ? `background-color: ${backgroundColor};` : null}
   ${({ customMargin }) => (customMargin ? `margin: ${customMargin};` : null)}
   height: 74px;
   padding: 12px;
@@ -67,13 +71,13 @@ const Container = styled.div`
 `;
 
 function deleteMimeType(documentTitle: string, mimeType: string) {
-  const title = (documentTitle || '').replace(`${mimeType}`, '');
+  const title = (documentTitle || "").replace(`${mimeType}`, "");
   return title;
 }
 
-export type AttachmentVariants = 'submitWork' | 'requestRevision' | 'attach';
+export type AttachmentVariants = "submitWork" | "requestRevision" | "attach";
 
-interface Props {
+export interface Props {
   mimeType: string;
   linkUrl: string;
   title: string;
@@ -88,84 +92,89 @@ interface Props {
   hideVariant?: boolean;
   fileSize?: AttachmentVariants;
   customMargin?: string;
+  amplitudeEvent?: () => void;
   /**
    * className is needed to enable overriding style with encapsulation
    */
   className?: string;
 }
 
+
+
 export default function AttachmentBox(props: Props) {
   const {
     mimeType,
     linkUrl,
-    title = '',
+    title = "",
     tag,
     onDelete,
     width,
     jobId,
     documentId,
-    fileSize = '',
+    fileSize = 0,
     hideVariant = false,
     className,
+
+    amplitudeEvent,
   } = props;
 
   function getFileType(mimetype: string) {
     if (
       [
-        'application/msword',
-        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
       ].includes(mimetype)
     ) {
-      return '.doc';
+      return ".doc";
     }
 
-    if (['image/gif'].includes(mimetype)) {
-      return '.gif';
+    if (["image/gif"].includes(mimetype)) {
+      return ".gif";
     }
 
-    if (['image/jpeg'].includes(mimetype)) {
-      return '.jpg';
+    if (["image/jpeg"].includes(mimetype)) {
+      return ".jpg";
     }
 
-    if (['image/png'].includes(mimetype)) {
-      return '.png';
+    if (["image/png"].includes(mimetype)) {
+      return ".png";
     }
 
-    if (['application/pdf'].includes(mimetype)) {
-      return '.pdf';
+    if (["application/pdf"].includes(mimetype)) {
+      return ".pdf";
     }
 
     if (
       [
-        'application/vnd.ms-powerpoint',
-        'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+        "application/vnd.ms-powerpoint",
+        "application/vnd.openxmlformats-officedocument.presentationml.presentation",
       ].includes(mimetype)
     ) {
-      return '.ppt';
+      return ".ppt";
     }
 
-    if (['application/vnd.rar'].includes(mimetype)) {
-      return '.rar';
+    if (["application/vnd.rar"].includes(mimetype)) {
+      return ".rar";
     }
 
-    if (['image/svg+xml'].includes(mimetype)) {
-      return '.svg';
+    if (["image/svg+xml"].includes(mimetype)) {
+      return ".svg";
     }
 
     if (
       [
-        'application/vnd.ms-excel',
-        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        "application/vnd.ms-excel",
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
       ].includes(mimetype)
     ) {
-      return '.xls';
+      return ".xls";
     }
 
-    if (['application/zip'].includes(mimetype)) {
-      return '.zip';
+    if (["application/zip"].includes(mimetype)) {
+      return ".zip";
     }
 
-    return '';
+    return "";
   }
 
   return (
@@ -174,24 +183,30 @@ export default function AttachmentBox(props: Props) {
       backgroundColor={props.backgroundColor}
       width={width}
       onClick={() => {
-        if (typeof props.onClick === 'function') {
+        if (typeof props.onClick === "function") {
           props.onClick?.(jobId, documentId);
         }
 
         if (linkUrl) {
-          window.open(/^https?:\/\//.test(linkUrl) ? linkUrl : `https://${linkUrl}`, '_blank');
+          window.open(
+            /^https?:\/\//.test(linkUrl) ? linkUrl : `https://${linkUrl}`,
+            "_blank"
+          );
         }
       }}
       className={className}
     >
       <AttachmentItem>
-        <SVG src={mimeType ? getIconByFileType(mimeType) : link} style={{ marginRight: '8px' }} />
-        {props.variant !== '' || props.variant !== undefined ? (
+        <SVG
+          src={mimeType ? getIconByFileType(mimeType) : link}
+          style={{ marginRight: "8px" }}
+        />
+        {props.variant !== "" || props.variant !== undefined ? (
           <Col
             style={{
               minWidth: 0,
-              flex: '1 1 100%',
-              flexWrap: 'nowrap',
+              flex: "1 1 100%",
+              flexWrap: "nowrap",
             }}
           >
             <Row>
@@ -199,7 +214,7 @@ export default function AttachmentBox(props: Props) {
                 _as="s5"
                 color="black80"
                 ellipsis
-                style={{ maxWidth: '195px', whiteSpace: 'nowrap' }}
+                style={{ maxWidth: "195px", whiteSpace: "nowrap" }}
               >
                 {deleteMimeType(title, getFileType(mimeType))}
               </Text>
@@ -215,14 +230,15 @@ export default function AttachmentBox(props: Props) {
                   style={{ marginTop: 0 }}
                 >
                   {!hideVariant
-                    ? props.variant === 'attach'
-                      ? 'Attachment'
-                      : props.variant === 'submitWork'
-                      ? 'Final Work'
+                    ? props.variant === "attach"
+                      ? "Attachment"
+                      : props.variant === "submitWork"
+                      ? "Final Work"
                       : null
                     : null}
                 </Text>
-                {props.variant === 'requestRevision' || props.variant === 'submitJob' ? null : (
+                {props.variant === "requestRevision" ||
+                props.variant === "submitJob" ? null : (
                   <>
                     {!hideVariant && <Spacer size={8} />}
                     <Text
@@ -240,11 +256,14 @@ export default function AttachmentBox(props: Props) {
             )}
           </Col>
         ) : (
-          <Text _as="s5" color="black80" ellipsis style={{ maxWidth: '80px' }}>
-            {title.length > 10 ? `${title.slice(0, 6)}.. ${getFileType(mimeType)}` : title}
+          <Text _as="s5" color="black80" ellipsis style={{ maxWidth: "80px" }}>
+            {title.length > 10
+              ? `${title.slice(0, 6)}.. ${getFileType(mimeType)}`
+              : title}
           </Text>
         )}
-        {(props.variant === '' || props.variant === undefined) && title.length > 10 ? (
+        {(props.variant === "" || props.variant === undefined) &&
+        title.length > 10 ? (
           <Text _as="s5" color="black80">
             {getFileType(mimeType)}
           </Text>
@@ -256,7 +275,7 @@ export default function AttachmentBox(props: Props) {
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
-              amplitudeEvent('deleted attachment');
+              amplitudeEvent("deleted attachment");
               onDelete();
             }}
           >
@@ -270,11 +289,18 @@ export default function AttachmentBox(props: Props) {
           <div
             style={{
               background: colors.red90,
-              padding: '3px 5px',
-              borderRadius: '10px 0px',
+              padding: "3px 5px",
+              borderRadius: "10px 0px",
             }}
           >
-            <Text _as="b1" size="10px" lineHeight="12px" letterSpacing="0.3px" bold color="white">
+            <Text
+              _as="b1"
+              size="10px"
+              lineHeight="12px"
+              letterSpacing="0.3px"
+              bold
+              color="white"
+            >
               NEW
             </Text>
           </div>
