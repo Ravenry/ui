@@ -26,6 +26,5 @@ standard.args = {
     hideVariant: false,
     fileSize: "submitWork",
     customMargin: "",
-    amplitudeEvent: () => alert("Amplide Event"),
     className: "",
 };

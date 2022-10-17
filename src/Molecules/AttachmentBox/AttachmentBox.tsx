@@ -92,14 +92,11 @@ export interface Props {
   hideVariant?: boolean;
   fileSize?: AttachmentVariants;
   customMargin?: string;
-  amplitudeEvent?: () => void;
   /**
    * className is needed to enable overriding style with encapsulation
    */
   className?: string;
 }
-
-
 
 export default function AttachmentBox(props: Props) {
   const {
@@ -114,8 +111,6 @@ export default function AttachmentBox(props: Props) {
     fileSize = 0,
     hideVariant = false,
     className,
-
-    amplitudeEvent,
   } = props;
 
   function getFileType(mimetype: string) {
@@ -275,7 +270,6 @@ export default function AttachmentBox(props: Props) {
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
-              amplitudeEvent("deleted attachment");
               onDelete();
             }}
           >
