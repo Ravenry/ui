@@ -1,21 +1,34 @@
 import React from 'react';
 
-import { Icon, Tooltip } from '@ravenry/ui';
+import { Icon, Tooltip } from '../../Atoms';
+import { ColorOptions } from '../../shared/colors';
 
-/**
- * IconWithTooltip
- *
- * @param {Object} props
- * @param {String} props.name - icon name
- * @param {(e: React.SyntheticEvent) => void} [props.onClick] - callback when clicked
- * @param {String} props.content - tooltip content
- * @param {String | {top:String, right: String}
- *          | {top:String, left: String}} props.position - tooltip position
- * @param {String} [props.arrowPosition] - tooltip arrow position
- * @param {string} [props.fill] - icon fill
- * @param {string} [props.hoverFill] - icon fill
- */
-export default function IconWithTooltip(props) {
+
+interface IconWithTooltipProps {
+  name: string;
+  onClick?: () => void;
+  position?:
+    | 'left'
+    | 'right'
+    | 'top'
+    | 'bottom'
+    | 'bottom-right'
+    | 'bottom-left'
+    | { top?: string; left?: string; right?: string; bottom?: string };
+  arrowPosition?:
+    | 'right'
+    | 'left'
+    | 'top'
+    | 'bottom'
+    | 'bottom-center'
+    | 'bottom center';
+  content: string;
+  iconStyle?: React.CSSProperties;
+  fill?: ColorOptions;
+  hoverFill?: ColorOptions;
+}
+
+export default function IconWithTooltip(props: IconWithTooltipProps) {
   const { name, position, arrowPosition, content, onClick, iconStyle, fill, hoverFill } = props;
 
   return (
