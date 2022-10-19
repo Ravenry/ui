@@ -25,7 +25,7 @@ export { default as IconWithTooltip } from './IconWithTooltip/IconWithTooltip';
 // export { default as Uploader } from './Uploader/Uploader';
 // export { default as FilePreview } from './FilePreview/FilePreview';
 // // export { default as CheckboxGrid } from './CheckboxGrid/CheckboxGrid';
-// export { default as IconButton } from './IconButton/IconButton';
+export { default as IconButton } from './IconButton/IconButton';
 // export { default as BubbleChat } from './BubbleChat/BubbleChat';
 // export { default as Progress } from './Progress/Progress';
 // export { default as SlideOver } from './SlideOver/SlideOver';
