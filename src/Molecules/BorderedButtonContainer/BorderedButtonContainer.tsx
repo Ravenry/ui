@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { Button, Container, Text, Spacer, ButtonProps } from '@ravenry/ui';
-import colors from '../../shared/colors';
+import { Button, Container, Text, Spacer, ButtonProps } from "../../Atoms";
+import colors from "../../shared/colors";
 
-interface Props extends ButtonProps {
+export interface Props extends ButtonProps {
   upperText?: string;
   lowerText?: string;
   upload?: boolean;
@@ -38,7 +38,7 @@ export default function BorderedButtonContainer({
         hiddenFileInputRef.current.click();
       }
     } else {
-      if (typeof rest.onClick === 'function') {
+      if (typeof rest.onClick === "function") {
         rest.onClick(e);
       }
     }
@@ -62,12 +62,12 @@ export default function BorderedButtonContainer({
         type="file"
         ref={hiddenFileInputRef}
         onClick={(e) => {
-          e.target.value = null;
+          (e.target as HTMLInputElement).value = "";
         }}
-        style={{ display: 'none' }}
+        style={{ display: "none" }}
         multiple={false}
         onChange={(e) => {
-          if (typeof onUpload === 'function' && e.target.files !== null) {
+          if (typeof onUpload === "function" && e.target.files !== null) {
             onUpload(Array.from(e.target.files));
           }
         }}
