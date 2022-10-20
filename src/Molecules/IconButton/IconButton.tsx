@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { Icon, Tooltip } from '@ravenry/ui';
+import { Icon, Tooltip } from '../../Atoms';
 import colors, { ColorOptions } from '../../shared/colors';
 
 interface RootProps {
