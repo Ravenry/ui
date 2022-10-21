@@ -26,6 +26,7 @@ const CardRoot = withProps<CardRootProps>()(styled(Segment))`
   flex-direction: ${({ column }) => (column ? "column" : "row")};
   ${({ borderRadius }) =>
     borderRadius ? `border-radius: ${borderRadius};` : "border-radius: 10px;"}
+   
   ${({ borderTop }) => (borderTop ? `border-top: ${borderTop};` : "")}
   ${({ shadow }) => (shadow ? `box-shadow: ${shadow};` : getElevation(2))}
   ${({ height }) => (height ? `height: ${height};` : "")}
