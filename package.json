@@ -1,6 +1,6 @@
 {
   "name": "@ravenry/ui",
-  "version": "0.2.6",
+  "version": "0.9.0",
   "private": false,
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.18.6",
@@ -28,7 +28,10 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic --project-token=67bd77bfd885",
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "build-storybook-deployment": "build-storybook",
+    "predeploy": "npm run build-storybook-deployment",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "eslintConfig": {
     "extends": [
@@ -62,6 +65,7 @@
     "@babel/cli": "^7.18.6",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-image": "^3.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.3",
     "@storybook/addon-actions": "^6.5.9",
@@ -81,6 +85,7 @@
     "babel-plugin-styled-components": "^2.0.7",
     "chromatic": "^6.7.0",
     "cross-env": "^7.0.3",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "react": "^17.0.1",
@@ -98,7 +103,6 @@
     "react-dom": "^17.0.1"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "learnstorybook-design-system-template@0.1.0",
   "description": "Ravenry's UI component library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -107,6 +111,7 @@
   ],
   "types": "dist/index.d.ts",
   "repository": "https://github.com/Ravenry/ui",
+  "homepage": "http://Ravenry.github.io/ui",
   "author": "Ravenry Engineering <engineering@theravenry.com>",
   "license": "MIT"
 }

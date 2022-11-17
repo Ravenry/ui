@@ -1,6 +1,7 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
+import image from "@rollup/plugin-image";
 import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
@@ -28,6 +29,7 @@ export default [
       peerDepsExternal(),
       resolve(),
       commonjs(),
+      image(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss(),
       babel({

@@ -1,17 +1,82 @@
-# v2.5.1 (Sun Jul 03 2022)
+# Changelog
 
-#### ⚠️ Pushed to `main`
+All notable changes to this project will be documented in this file.
 
-- add chromatic ([@rianAnugrah](https://github.com/rianAnugrah))
-- First commit ([@rianAnugrah](https://github.com/rianAnugrah))
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-#### Authors: 1
+## 0.9.0 - 2022-10-21
 
-- Rian Anugrah ([@rianAnugrah](https://github.com/rianAnugrah))
-# v0.1.0 (Tue Mar 09 2021)
+### Changed
 
-- Created first version of the design system, with `Avatar`, `Badge`, `Button`, `Icon` and `Link` components.
+- Change default border radius of `NewCard` molecule
 
-#### Authors: 1
+## 0.8.0 - 2022-10-20
 
-- [your-username](https://github.com/your-username)
+### Added
+
+- Add `NewCard` molecule
+
+## 0.7.0 - 2022-10-20
+
+### Added
+
+- Add `IconButton` molecule
+
+## 0.6.0 - 2022-10-19
+
+### Added
+
+- Add `BorderedButtonContainer` molecule
+
+### Changed
+
+- Rephrase wording in changelog entries
+
+### Fixed
+
+- Remove duplicate entries
+
+## 0.5.0 - 2022-10-17
+
+### Added
+
+- Add `IconWithTooltip` molecule
+- Add `AttachmentBox` molecule
+
+### Changed
+
+- Update build process using rollup to accept image resources
+
+## 0.4.0 - 2022-10-13
+
+### Added
+
+- Add `Alert` molecule
+
+### Changed
+
+- Update typo variable in stories file of `Accordion`
+- Update formatting of component entities in existing changelog entries
+
+## 0.3.2 - 2022-10-13
+
+### Fixed
+
+- Remove extra unnecessary char in Accordion molecule
+
+## 0.3.1 - 2022-10-13
+
+### Changed
+
+- Update `CHANGELOG.md` heading format
+
+### Fixed
+
+- Fix syntax error in `Accordion` molecule
+
+## 0.3.0 - 2022-10-12
+
+### Added
+
+- Add `Accordion` molecule
