@@ -1,9 +1,13 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import colors from "../utils/colors";
+import colors, { ColorOptions } from "../utils/colors";
 
-const Root = styled.a`
+const Root = styled.a<{
+  active?: boolean;
+  activeColor?: ColorOptions;
+  bold?: boolean;
+}>`
   width: 60px;
   cursor: pointer;
   display: flex;
@@ -14,11 +18,12 @@ const Root = styled.a`
   line-height: 18px;
   letter-spacing: 0.2px;
   padding-top: 8px;
+  ${({ bold }) => (bold ? `font-weight:bold;` : "")}
   ${(props) =>
     props.active
       ? css`
           /* border-bottom: 2px solid ${colors.blue}; */
-          color: ${colors.black};
+          color: ${props.activeColor ? props.activeColor : colors.black};
         `
       : css`
           color: ${colors.black40};
@@ -38,18 +43,24 @@ const Root = styled.a`
   } */
 `;
 
-/**
- * NavItemMobile
- *
- * @param {Object} props -
- * @param {Function} props.onClick
- * @param {Boolean} props.active
- */
-export default function NavItemMobile(props) {
-  const { children, onClick, active } = props;
+interface Props {
+  children?: React.ReactNode;
+  onClick?: React.MouseEventHandler;
+  active?: boolean;
+  activeColor?: ColorOptions;
+  bold?: boolean;
+}
+
+export default function NavItemMobile(props: Props) {
+  const { children, onClick, active, bold, activeColor } = props;
 
   return (
-    <Root onClick={onClick} active={active}>
+    <Root
+      onClick={onClick}
+      active={active}
+      bold={bold}
+      activeColor={activeColor}
+    >
       {children}
     </Root>
   );
