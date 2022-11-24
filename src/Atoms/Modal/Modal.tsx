@@ -148,7 +148,7 @@ const ModalBody = styled.div`
  * @param {String} [props.outerPadding] - custom modal outer padding
  */
 function Modal(props) {
-  const { width, padding, style, outerPadding } = props;
+  const { width, padding, style, outerPadding, className } = props;
   const { isMobile } = Responsive();
 
   React.useEffect(() => {
@@ -165,6 +165,7 @@ function Modal(props) {
         open={props.open}
         data-cy={props["data-cy"]}
         width={width}
+        className={className}
       >
         {isMobile ? (
           <ContainerMobile>
