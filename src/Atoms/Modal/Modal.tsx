@@ -14,11 +14,11 @@ const ContainerMobile = styled.div`
   /* height: 100vh; */
 `;
 
-const MobileContent = styled.div`
+const MobileContent = styled.div<{ width?: string }>`
   /* max-height: 100vh; */
   overflow: auto;
   padding: 24px;
-  width: 360px;
+  width: ${({ width = "360px" }) => width};
   border-radius: 20px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
   background-color: #ffffff; /* Fallback color */
@@ -180,7 +180,7 @@ function Modal(props) {
               )}
             </ModalHeader>
             {props.subheader && <Subtitle>{props.subheader}</Subtitle>}
-            <MobileContent>{props.children}</MobileContent>
+            <MobileContent width={width}>{props.children}</MobileContent>
             <Spacer display="block" size="24" />
           </ContainerMobile>
         ) : (
