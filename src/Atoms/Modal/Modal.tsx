@@ -11,6 +11,8 @@ const ContainerMobile = styled.div`
   /* width: 100vw; */
   align-items: center;
   justify-content: center;
+  width: auto;
+  margin: 0px 20px;
   /* height: 100vh; */
 `;
 
@@ -165,6 +167,7 @@ function Modal(props) {
         open={props.open}
         data-cy={props["data-cy"]}
         width={width}
+        {...props}
       >
         {isMobile ? (
           <ContainerMobile>
