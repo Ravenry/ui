@@ -121,6 +121,7 @@ export default function NavItem(props) {
       to={props.to}
       ref={ref}
       id={id}
+      className={props.className}
     >
       {props.width}
       {children}
@@ -137,6 +138,7 @@ export default function NavItem(props) {
       id={id}
       center={center}
       style={style}
+      className={props.className}
     >
       {props.width}
       <TextContainer>{children}</TextContainer>
