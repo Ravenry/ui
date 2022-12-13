@@ -94,10 +94,6 @@ const Root = styled.a.withConfig({
             color: ${colors.black60};
             text-decoration: none;
           }
-
-          &:not(:last-child) {
-            margin-right: 24px;
-          }
         `}
 `;
 
