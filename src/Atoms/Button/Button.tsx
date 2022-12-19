@@ -280,7 +280,8 @@ interface ContainerProps extends ButtonProps {
 }
 
 const Container = styled.button<ContainerProps>`
-  height: ${({ height }) => height || "32px"};
+  height: ${({ height }) => height || "fit-content"};
+  min-height: "32px";
   min-width: 110px;
   width: ${({ fluid, width, transparent, newPadding }) =>
     fluid ? "100%" : width || (transparent || newPadding ? "auto" : "150px")};
