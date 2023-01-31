@@ -96,7 +96,7 @@ const Initial = styled.div<ContainerStyleProps>`
       ? "40px"
       : "32px"};
   height: ${(props) =>
-    size === "larger"
+    props.size === "larger"
       ? "125px"
       : props.size === "large"
       ? "100px"
