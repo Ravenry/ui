@@ -203,7 +203,8 @@ const DefaultRoot = styled.p<RootProps>`
 
 const HeaderRoot = styled.div<RootProps>`
   color: ${(props) => (props.color ? colors[props.color] : colors.black100)};
-  font-weight: ${(props) => (props.bold ? "bold" : "normal")};
+  font-weight: ${({ bold, bolder }) =>
+    bold ? "bold" : bolder ? "900" : "normal"};
   max-width: ${(props) => (props.isMobile ? "100%" : "calc(100vw - 400px)")};
 
   width: ${(props) =>

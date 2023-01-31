@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import colors from "../utils/colors";
 
 interface ContainerStyleProps {
-  size: "large" | "big" | "medium" | "small" | string | undefined;
+  size: "larger" | "large" | "big" | "medium" | "small" | string | undefined;
   image?: boolean;
   saved?: boolean;
   square?: boolean;
@@ -13,7 +13,9 @@ interface ContainerStyleProps {
 const Container = styled.div<ContainerStyleProps>`
   position: relative;
   width: ${({ size }) =>
-    size === "large"
+    size === "larger"
+      ? "125px"
+      : size === "large"
       ? "100px"
       : size === "big"
       ? "88px"
@@ -23,7 +25,9 @@ const Container = styled.div<ContainerStyleProps>`
       ? "40px"
       : "32px"};
   height: ${({ size }) =>
-    size === "large"
+    size === "larger"
+      ? "125px"
+      : size === "large"
       ? "100px"
       : size === "big"
       ? "88px"
@@ -35,7 +39,9 @@ const Container = styled.div<ContainerStyleProps>`
   ${({ image, size }) =>
     !image &&
     css`
-      line-height: ${size === "large"
+      line-height: ${size === "larger"
+        ? "125px"
+        : size === "large"
         ? "100px"
         : size === "big"
         ? "88px"
@@ -46,7 +52,9 @@ const Container = styled.div<ContainerStyleProps>`
         : "32px"};
     `}
   font-size: ${({ size }) =>
-    size === "large"
+    size === "larger"
+      ? "56px"
+      : size === "large"
       ? "48px"
       : size === "big"
       ? "36px"
@@ -76,7 +84,9 @@ const Image = styled.img<ImageStyleProps>`
 
 const Initial = styled.div<ContainerStyleProps>`
   width: ${(props) =>
-    props.size === "large"
+    props.size === "larger"
+      ? "125px"
+      : props.size === "large"
       ? "100px"
       : props.size === "big"
       ? "88px"
@@ -86,7 +96,9 @@ const Initial = styled.div<ContainerStyleProps>`
       ? "40px"
       : "32px"};
   height: ${(props) =>
-    props.size === "large"
+    size === "larger"
+      ? "125px"
+      : props.size === "large"
       ? "100px"
       : props.size === "big"
       ? "88px"
@@ -131,7 +143,7 @@ const SavedTag = styled.div`
 `;
 
 interface AvatarProps {
-  size?: "large" | "big" | "medium" | "small" | string;
+  size?: "larger" | "large" | "big" | "medium" | "small" | string;
   name?: string;
   url: string | null;
   children?: React.ReactNode;
