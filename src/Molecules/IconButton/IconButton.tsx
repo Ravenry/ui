@@ -116,7 +116,7 @@ interface IconButtonProps {
   active?: boolean;
   name: string;
   width?: string;
-  tooltipOptions: {
+  tooltipOptions?: {
     position: string | { top: string; left: string } | { top: string; right: string };
     content: string;
     arrowPosition:
