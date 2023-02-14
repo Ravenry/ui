@@ -49,10 +49,11 @@ interface Props {
   active?: boolean;
   activeColor?: ColorOptions;
   bold?: boolean;
+  className?: string;
 }
 
 export default function NavItemMobile(props: Props) {
-  const { children, onClick, active, bold, activeColor } = props;
+  const { children, onClick, active, bold, activeColor, className } = props;
 
   return (
     <Root
@@ -60,6 +61,7 @@ export default function NavItemMobile(props: Props) {
       active={active}
       bold={bold}
       activeColor={activeColor}
+      className={className}
     >
       {children}
     </Root>
