@@ -52,5 +52,5 @@ export { default as ProgressBar } from "./ProgressBar/ProgressBar";
 export { default as ToggleButton } from "./ToggleButton/ToggleButton";
 // export { default as MobileHeading } from "./MobileHeading/MobileHeading";
 export { default as RequiredLabel } from "./RequiredLabel/RequiredLabel";
-// export { default as LinkButton } from "./Link/LinkButton";
+export { default as LinkButton } from "./LinkButton/LinkButton";
 export { default as ErrorText } from "./ErrorText/ErrorText";
