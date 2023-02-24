@@ -271,6 +271,15 @@ export interface ButtonProps {
   "data-cy"?: string;
 
   children: React.ReactNode;
+
+  /**
+   * className for the button itself
+   */
+  className?: string;
+  /**
+   * iconClassName is specific for icon only
+   */
+  iconClassName?: string;
 }
 
 interface ContainerProps extends ButtonProps {
@@ -351,6 +360,8 @@ export default function Button(props: ButtonProps) {
     bold = true,
     iconSpacing,
     rounded,
+    className,
+    iconClassName,
   } = props;
 
   return (
@@ -361,10 +372,12 @@ export default function Button(props: ButtonProps) {
       variant={variant}
       bold={bold}
       data-cy={props["data-cy"]}
+      className={className}
     >
       {props.icon && props.iconAlignment !== "right" && (
         <>
           <Icon
+            className={iconClassName}
             name={props.icon}
             fill={props.disabled ? "black40" : props.iconFill || "white"}
           />

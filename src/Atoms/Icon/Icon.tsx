@@ -47,28 +47,11 @@ interface IconProps extends IconContainerProps {
   width?: string;
   height?: string;
   onClick?: () => void;
+  className?: string
 }
 
-/**
- * Icon
- *
- * @param {Object} props - props of the component
- * @param {String} props.name - name of the icon
- * @param {React.CSSProperties} [props.style] -
- * @param {Boolean} [props.clickable] - make the cursor pointer if true
- * @param {String} [props.fill] - fill of the icon
- * @param {String} [props.width] - custom width
- * @param {String} [props.height] - custom height
- * @param {String} [props.hoverFill] - fill of the icon if hovered
- * @param {Function} [props.onClick] - callback when the icon is clicked
- * @param {Function} [props.onMouseDown] - callback when pressing a mouse button
- * @param {Function} [props.onMouseUp] - callback when releasing a mouse button
- * @param {Function} [props.onMouseOut] - callback when moving the mouse pointer out of the icon
- * @param {*} [props.viewBox] -
- * @param {String} [props.margin] - custom margin
- */
 export default function Icon(props: IconProps) {
-  const { name } = props;
+  const { name, className } = props;
   const [icon, setIcon] = React.useState<React.ReactNode>(null);
 
   React.useEffect(() => {
@@ -722,6 +705,7 @@ export default function Icon(props: IconProps) {
     <IconContainer
       {...props}
       viewBox={props.viewBox ? props.viewBox : "0 0 20 20"}
+      className={className}
     >
       {icon}
     </IconContainer>
