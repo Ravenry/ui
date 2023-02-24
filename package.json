@@ -100,7 +100,8 @@
   },
   "peerDependencies": {
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.3.5"
   },
   "readme": "ERROR: No README data found!",
   "description": "Ravenry's UI component library",
