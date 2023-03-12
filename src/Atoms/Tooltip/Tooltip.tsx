@@ -5,7 +5,7 @@ import colors from "../utils/colors";
 
 /* Tooltip container */
 const TooltipContainer = styled.div`
-  position: ${(props) => !props.isMobile && "relative"};
+  position: relative;
   display: flex;
   align-items: center;
   /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
