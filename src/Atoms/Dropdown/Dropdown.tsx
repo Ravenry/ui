@@ -1,10 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled, { CSSProperties } from "styled-components";
 
 import DropdownItem from "./DropdownItem";
 
 interface RootProps {
-  ref?: HTMLDivElement;
   position?: { left: number; top: number };
 }
 
@@ -45,13 +44,6 @@ const Container = styled.div<ContainerProps>`
 
 interface DropdownProps {
   children: React.ReactNode;
-  ref?: (
-    | ((instance: HTMLDivElement | null) => void)
-    | React.RefObject<HTMLDivElement>
-    | null
-    | undefined
-  ) &
-    HTMLDivElement;
   style?: React.CSSProperties | CSSProperties | object;
   position?: { left: number; top: number };
   width?: string | number;
@@ -61,8 +53,13 @@ interface DropdownProps {
   "data-cy"?: string;
 }
 
-function Dropdown(props: DropdownProps) {
-  const { children, ref, style, position, width } = props;
+interface DropdownComponent extends React.ForwardRefExoticComponent<DropdownProps & React.RefAttributes<HTMLDivElement>> {
+  Item: typeof DropdownItem;
+}
+
+
+const Dropdown = forwardRef(function Dropdown(props:DropdownProps, ref) {
+  const { children, style, position, width } = props;
 
   return (
     <Root ref={ref} position={position}>
@@ -71,7 +68,7 @@ function Dropdown(props: DropdownProps) {
       </Container>
     </Root>
   );
-}
+})  as DropdownComponent;
 
 Dropdown.Item = DropdownItem;
 
