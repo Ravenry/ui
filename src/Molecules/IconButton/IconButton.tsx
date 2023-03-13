@@ -150,6 +150,7 @@ export default function IconButton(props: IconButtonProps) {
 
   return (
     <Root
+      type="button"
       onClick={onClick}
       solid={solid}
       hoverColor={hoverColor}
